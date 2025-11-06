@@ -7,10 +7,11 @@ float multiplication(float, float);
 void getTwoNumber(float *, float *);
 int factorial();
 int fibonacci();
+int square();
 
 int main()
 {
-    printf("Choice Menu: \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. Factorial \n 6. Fibonacci sum\n 7. Exit\n");
+    printf("Choice Menu: \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. Factorial \n 6. Fibonacci sum\n 7. Square \n 8. Exit\n");
     float num1, num2;
     for (int i = 0;; i++)
     {
@@ -53,9 +54,11 @@ int main()
 
         else if (choice == 7)
         {
-
+            printf("square is : %d\n\n",square());
+        }
+        else if (choice == 8){
             printf("Session Closed\n");
-            break;
+            break;    
         }
         else
         {
@@ -136,4 +139,11 @@ int fibonacci()
         sum += k;
     }
     printf("fibonacie series sum is %d\n\n", sum);
+}
+
+int square(){
+    int num;
+    printf("enter number: ");
+    scanf("%d", &num);
+    return num*num;
 }
