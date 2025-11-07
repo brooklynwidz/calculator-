@@ -147,3 +147,13 @@ int square(){
     scanf("%d", &num);
     return num*num;
 }
+int sqroot(){
+    double num, result;
+
+    printf("Enter a number: ");
+    scanf("%lf", &num);
+
+    result = sqrt(num);
+
+    printf("Square root of %.2lf is %.2lf\n", num, result);
+}
